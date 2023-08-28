@@ -24,7 +24,7 @@ local function Chat(Message)
         ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(Message, "All")
     end
 end
-for i=1,2 do
+for i=1,3 do
  task.spawn(function()
 Chat(".gg/ugcleaks || redblue on top.")
   end)
