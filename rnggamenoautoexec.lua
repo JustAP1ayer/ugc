@@ -17,6 +17,13 @@ and game.Players.LocalPlayer.Character
  game.Players.LocalPlayer.Character:PivotTo(coinL.CFrame)
  repeat task.wait(0.1) until not coinL
 end
+        workspace.ChildAdded:Connect(function(child)
+if (child.Name == "coin" or child.Name == "coins")
+and game.Players.LocalPlayer.Character 
+ then
+ game.Players.LocalPlayer.Character:PivotTo(child.CFrame)
+end
+    end)
 task.wait(0.1)
       queue_on_teleport([[
     task.wait(1.5)
