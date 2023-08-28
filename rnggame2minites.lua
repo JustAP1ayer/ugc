@@ -9,6 +9,7 @@ task.wait(2.15)
 if _G.MinTimer == nil then
     _G.MinTimer = 30
 end
+task.wait(0.1)
    local gui = Instance.new("ScreenGui")
       gui.Name = "FarmGui"
       gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -29,6 +30,7 @@ end
       message.TextScaled = true
       message.Parent = frame
 task.wait(0.25)
+spawn(function()
 for i,child in pairs(workspace:GetChildren()) do
      task.wait(0.14) -- 14 is my lucky number <3
 if (child.Name == "coin" or child.Name == "coins") and child:IsA("Model") and child.PrimaryPart
@@ -46,6 +48,7 @@ and game.Players.LocalPlayer.Character
  then
  game.Players.LocalPlayer.Character:PivotTo(child.PrimaryPart.CFrame)
 end
+    end)
     end)
 task.wait(0.3)
 spawn(function()
