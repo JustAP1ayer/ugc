@@ -9,7 +9,7 @@ task.wait(0.15)
 if _G.MinTimer == nil then
     _G.MinTimer = 30
 end
-if workspace:FindFirstChild("coin") or workspace:FindFirstChild("coins")
+if (workspace:FindFirstChild("coin") or workspace:FindFirstChild("coins"))
 and game.Players.LocalPlayer.Character 
  then
  local coinL = workspace:FindFirstChild("coin") or workspace:FindFirstChild("coins")
