@@ -12,17 +12,20 @@ if _G.MinTimer == nil then
 end
 
 if (workspace:FindFirstChild("coin") or workspace:FindFirstChild("coins"))
-and game.Players.LocalPlayer.Character 
+and game.Players.LocalPlayer.Character  
  then
+    
  local coinL = workspace:FindFirstChild("coin") or workspace:FindFirstChild("coins")
- game.Players.LocalPlayer.Character:PivotTo(coinL.CFrame)
+    if coinL:IsA("Model") then
+ game.Players.LocalPlayer.Character:PivotTo(coinL.PrimaryPart.CFrame)
  repeat task.wait(0.1) until not coinL
 end
+end
         workspace.ChildAdded:Connect(function(child)
-if (child.Name == "coin" or child.Name == "coins")
+if (child.Name == "coin" or child.Name == "coins") and child:IsA("Model") and child.PrimaryPart
 and game.Players.LocalPlayer.Character 
  then
- game.Players.LocalPlayer.Character:PivotTo(child.CFrame)
+ game.Players.LocalPlayer.Character:PivotTo(child.PrimaryPart.CFrame)
 end
     end)
 task.wait(0.1)
