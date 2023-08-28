@@ -103,7 +103,9 @@ else
     task.wait(2.5)
     if game.CoreGui.PurchasePrompt.ProductPurchaseContainer.Animator:FindFirstChild("Prompt") then
         task.wait(1)
-
+if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("FarmGui") then
+            game:GetService("Players").LocalPlayer.PlayerGui.FarmGui:Destroy()
+        end
         repeat
             wait(0.1)
         until not game.CoreGui.PurchasePrompt.ProductPurchaseContainer.Animator:FindFirstChild("Prompt")
