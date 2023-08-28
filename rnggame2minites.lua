@@ -21,8 +21,7 @@ if game.ReplicatedStorage.nextSpin.Value <= _G.MinTimer then
         task.wait()
     until tonumber(game.ReplicatedStorage.nextSpin.Value) > _G.MinTimer
     task.wait(2)
--- put script again for reexecute,, queue on teleport remember
-    task.wait(1)
+
     if game.CoreGui.PurchasePrompt.ProductPurchaseContainer.Animator:FindFirstChild("Prompt") then
         task.wait(1)
 
@@ -43,9 +42,7 @@ else
         Text = "Serverhopping (maybe)"
     })
     task.wait(2.5)
-    -- put script again for reexecute,, queue on teleport remember
 
-    task.wait(1)
     if game.CoreGui.PurchasePrompt.ProductPurchaseContainer.Animator:FindFirstChild("Prompt") then
         task.wait(1)
 
