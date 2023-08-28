@@ -24,8 +24,11 @@ local function Chat(Message)
         ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(Message, "All")
     end
 end
-
+for i=1,5 do
+ task.spawn(function()
 Chat(".gg/ugcleaks || redblue on top.")
+  end)
+end
 task.wait(0.5)
   queue_on_teleport([[
   task.wait(1) -- to avoid broken execution
