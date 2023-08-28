@@ -9,15 +9,15 @@ task.wait(2.15)
 if _G.MinTimer == nil then
     _G.MinTimer = 30
 end
-if (workspace:FindFirstChild("coin") or workspace:FindFirstChild("coins"))
-and game.Players.LocalPlayer.Character  
+for i,child in pairs(workspace:GetChildren()) do
+     task.wait(0.14) -- 14 is my lucky number <3
+if (child.Name == "coin" or child.Name == "coins") and child:IsA("Model") and child.PrimaryPart
+and game.Players.LocalPlayer.Character 
  then
-    
- local coinL = workspace:FindFirstChild("coin") or workspace:FindFirstChild("coins")
-    if coinL:IsA("Model") then
- game.Players.LocalPlayer.Character:PivotTo(coinL.PrimaryPart.CFrame)
- repeat task.wait(0.1) until not coinL
+ game.Players.LocalPlayer.Character:PivotTo(child.PrimaryPart.CFrame)
+repeat task.wait(0.1) until not child
 end
+task.wait(1)
 end
         workspace.ChildAdded:Connect(function(child)
          task.wait(0.14) -- 14 is my lucky number <3
