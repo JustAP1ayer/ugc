@@ -20,6 +20,7 @@ and game.Players.LocalPlayer.Character
 end
 end
         workspace.ChildAdded:Connect(function(child)
+         task.wait(0.14) -- 14 is my lucky number <3
 if (child.Name == "coin" or child.Name == "coins") and child:IsA("Model") and child.PrimaryPart
 and game.Players.LocalPlayer.Character 
  then
