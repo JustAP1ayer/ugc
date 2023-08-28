@@ -32,7 +32,6 @@ if game:GetService("Players").LocalPlayer.PlayerGui.uiMain.frmMain.lblNextSpin.T
 end
     end)
 game:GetService("ReplicatedStorage").playerInfo:FindFirstChild(game.Players.LocalPlayer.Name).permOddsBoost.Value = true
-game:GetService("ReplicatedStorage").playerInfo:FindFirstChild(game.Players.LocalPlayer.Name).permSpeedBoost.Value = true
 game:GetService("ReplicatedStorage").playerInfo:FindFirstChild(game.Players.LocalPlayer.Name).wearingUgc.Value = true
 if game.ReplicatedStorage.nextSpin.Value <= _G.MinTimer then
 
