@@ -5,7 +5,7 @@ repeat
     wait(0.1)
 until game.Loaded and game.Players.LocalPlayer.Character and
     game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
-task.wait(0.15)
+task.wait(2.15)
 if _G.MinTimer == nil then
     _G.MinTimer = 30
 end
