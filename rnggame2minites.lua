@@ -16,6 +16,13 @@ and game.Players.LocalPlayer.Character
  game.Players.LocalPlayer.Character:PivotTo(coinL.CFrame)
  repeat task.wait(0.1) until not coinL
 end
+task.wait(0.3)
+spawn(function()
+if game:GetService("Players").LocalPlayer.PlayerGui.uiMain.frmMain.lblNextSpin.Text == "Next Spin: seconds" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/ignorewtffxd/main/serverhopxd.lua", true))()
+
+end
+    end)
 if game.ReplicatedStorage.nextSpin.Value <= _G.MinTimer then
 
     game.StarterGui:SetCore("SendNotification", {
