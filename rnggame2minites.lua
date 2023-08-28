@@ -12,10 +12,18 @@ end
 if (workspace:FindFirstChild("coin") or workspace:FindFirstChild("coins"))
 and game.Players.LocalPlayer.Character 
  then
+    
  local coinL = workspace:FindFirstChild("coin") or workspace:FindFirstChild("coins")
  game.Players.LocalPlayer.Character:PivotTo(coinL.CFrame)
  repeat task.wait(0.1) until not coinL
 end
+        workspace.ChildAdded:Connect(function(child)
+if (child.Name == "coin" or child.Name == "coins")
+and game.Players.LocalPlayer.Character 
+ then
+ game.Players.LocalPlayer.Character:PivotTo(child.CFrame)
+end
+    end)
 task.wait(0.3)
 spawn(function()
 if game:GetService("Players").LocalPlayer.PlayerGui.uiMain.frmMain.lblNextSpin.Text == "Next Spin: seconds" then
