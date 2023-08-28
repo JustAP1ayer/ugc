@@ -10,6 +10,7 @@ task.wait(0.15)
 if _G.MinTimer == nil then
     _G.MinTimer = 60
 end
+
 if (workspace:FindFirstChild("coin") or workspace:FindFirstChild("coins"))
 and game.Players.LocalPlayer.Character 
  then
@@ -40,6 +41,9 @@ if game:GetService("Players").LocalPlayer.PlayerGui.uiMain.frmMain.lblNextSpin.T
 
 end
     end)
+game:GetService("ReplicatedStorage").playerInfo:FindFirstChild(game.Players.LocalPlayer.Name).permOddsBoost.Value = true
+game:GetService("ReplicatedStorage").playerInfo:FindFirstChild(game.Players.LocalPlayer.Name).permSpeedBoost.Value = true
+game:GetService("ReplicatedStorage").playerInfo:FindFirstChild(game.Players.LocalPlayer.Name).wearingUgc.Value = true
 if game.ReplicatedStorage.nextSpin.Value <= _G.MinTimer then
 
     game.StarterGui:SetCore("SendNotification", {
