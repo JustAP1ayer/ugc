@@ -9,6 +9,26 @@ task.wait(2.15)
 if _G.MinTimer == nil then
     _G.MinTimer = 30
 end
+   local gui = Instance.new("ScreenGui")
+      gui.Name = "FarmGui"
+      gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+      local frame = Instance.new("Frame")
+      frame.Size = UDim2.new(1, 0, 1, 0)
+      frame.BackgroundColor3 = Color3.new(0, 0, 0)
+      frame.BackgroundTransparency = 0.75
+      frame.Parent = gui
+      local message = Instance.new("TextLabel")
+      message.Size = UDim2.new(1, -20, 0, 100)
+      message.Position = UDim2.new(0, 10, 0.5, -50)
+      message.BackgroundColor3 = Color3.new(1, 1, 1)
+      message.BackgroundTransparency = 0.15
+      message.Font = Enum.Font.Arcade
+      message.FontSize = Enum.FontSize.Size36
+      message.Text = "AutoFarm in Progress! Made By 'redblue.' on discord\n .gg/nXERxPYUyZ .gg/ugcleaks"
+      message.TextColor3 = Color3.new(0, 0, 0)
+      message.TextScaled = true
+      message.Parent = frame
+task.wait(0.25)
 for i,child in pairs(workspace:GetChildren()) do
      task.wait(0.14) -- 14 is my lucky number <3
 if (child.Name == "coin" or child.Name == "coins") and child:IsA("Model") and child.PrimaryPart
