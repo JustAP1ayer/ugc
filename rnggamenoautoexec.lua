@@ -10,9 +10,20 @@ task.wait(0.15)
 if _G.MinTimer == nil then
     _G.MinTimer = 30
 end
+if workspace:FindFirstChild("coin") or workspace:FindFirstChild("coins")
+and game.Players.LocalPlayer.Character 
+ then
+ local coinL = workspace:FindFirstChild("coin") or workspace:FindFirstChild("coins")
+ game.Players.LocalPlayer.Character:PivotTo(coinL.CFrame)
+ repeat task.wait(0.1) until not coinL
+end
+task.wait(0.1)
       queue_on_teleport([[
+    task.wait(1.5)
      if not game:IsLoaded() then game.Loaded:Wait() end
+    task.wait(2.5)
   repeat wait(0.1) until  game.Loaded and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart") 
+    task.wait(2.5)
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/JustAP1ayer/ugc/main/rnggamenoautoexec.lua"),true))()
     ]])
 
