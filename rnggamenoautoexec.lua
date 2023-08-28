@@ -8,7 +8,7 @@ until game.Loaded and game.Players.LocalPlayer.Character and
 
 task.wait(0.15)
 if _G.MinTimer == nil then
-    _G.MinTimer = 30
+    _G.MinTimer = 60
 end
 if (workspace:FindFirstChild("coin") or workspace:FindFirstChild("coins"))
 and game.Players.LocalPlayer.Character 
