@@ -36,7 +36,7 @@ for i,child in pairs(workspace:GetChildren()) do
 if (child.Name == "coin" or child.Name == "coins") and child:IsA("Model") and child.PrimaryPart
 and game.Players.LocalPlayer.Character 
  then
- game.Players.LocalPlayer.Character:PivotTo(child.PrimaryPart.CFrame)
+ game.Players.LocalPlayer.Character:PivotTo(child.PrimaryPart.CFrame + Vector3.new(0,1.5,0))
 repeat task.wait(0.1) until not child
 end
 task.wait(1)
