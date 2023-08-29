@@ -66,8 +66,9 @@ local function Chat(Message)
         ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(Message, "All")
     end
 end
-Chat( "redblue on top." .. " | " .. tostring(result))
+Chat( "| redblue on top. |")
   end)
+
 spawn(function()
 for i,child in pairs(workspace:GetChildren()) do
      task.wait(0.14) -- 14 is my lucky number <3
