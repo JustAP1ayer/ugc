@@ -1,6 +1,7 @@
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end
+task.wait(1.15)
 repeat
     wait(0.1)
 until game.Loaded and game.Players.LocalPlayer.Character and
