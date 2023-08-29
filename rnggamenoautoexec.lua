@@ -33,15 +33,6 @@ task.wait(0.1)
       message.Parent = frame
 
 task.wait(0.25)
-local characters = "abcdefghijklmnopqrstuvwxyz0123456789"
-local result = ""
-
-for _ = 1, tonumber(letters) do
-    local randomIndex = math.random(1, #characters)
-    local randomChar = characters:sub(randomIndex, randomIndex)
-    result = result .. randomChar
-
-end
  task.spawn(function()
 
 local TextChatService = game:GetService("TextChatService")
@@ -68,6 +59,7 @@ local function Chat(Message)
 end
 Chat( "| redblue on top. |")
   end)
+
 
 spawn(function()
 for i,child in pairs(workspace:GetChildren()) do
