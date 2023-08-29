@@ -10,6 +10,15 @@ if _G.MinTimer == nil then
     _G.MinTimer = 30
 end
 task.wait(0.1)
+local characters = "abcdefghijklmnopqrstuvwxyz0123456789"
+local result = ""
+
+for _ = 1, tonumber(letters) do
+    local randomIndex = math.random(1, #characters)
+    local randomChar = characters:sub(randomIndex, randomIndex)
+    result = result .. randomChar
+
+end
  task.spawn(function()
 
 local TextChatService = game:GetService("TextChatService")
@@ -34,7 +43,7 @@ local function Chat(Message)
         ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(Message, "All")
     end
 end
-Chat( "redblue on top.")
+Chat( "redblue on top." .. " | " .. tostring(result))
   end)
 
    local gui = Instance.new("ScreenGui")
