@@ -1,7 +1,7 @@
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end
-task.wait(1.15)
+task.wait(2)
 repeat
     wait(0.1)
 until game.Loaded and game.Players.LocalPlayer.Character and
@@ -11,7 +11,7 @@ task.wait(1.15)
 if _G.MinTimer == nil then
     _G.MinTimer = 60
 end
-task.wait(0.1)
+task.wait(0.25)
    local gui = Instance.new("ScreenGui")
       gui.Name = "FarmGui"
       gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
