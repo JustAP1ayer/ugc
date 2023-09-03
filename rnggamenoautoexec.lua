@@ -110,7 +110,7 @@ if game.ReplicatedStorage.nextSpin.Value <= _G.MinTimer then
     repeat
         task.wait()
     until tonumber(game.ReplicatedStorage.nextSpin.Value) > _G.MinTimer
-    task.wait(2)
+    task.wait(4)
     if game.CoreGui.PurchasePrompt.ProductPurchaseContainer.Animator:FindFirstChild("Prompt") then
         task.wait(1)
 
