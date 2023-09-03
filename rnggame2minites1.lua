@@ -34,9 +34,9 @@ spawn(function()
 for i,child in pairs(workspace:GetChildren()) do
      task.wait(0.14) -- 14 is my lucky number <3
 if (child.Name == "coin" or child.Name == "coins") and child:IsA("Model") and child.PrimaryPart
-and game.Players.LocalPlayer.Character 
+and game.Players.LocalPlayer.Character  and game.Players.LocalPlayer.Character.PrimaryPart
  then
- game.Players.LocalPlayer.Character:PivotTo(child.PrimaryPart.CFrame + Vector3.new(0,1.5,0))
+child.PrimaryPart.CFrame = game.Players.LocalPlayer.Character.PrimaryPart.CFrame
 repeat task.wait(0.1) until not child
 end
 task.wait(1)
@@ -44,9 +44,10 @@ end
         workspace.ChildAdded:Connect(function(child)
          task.wait(0.14) -- 14 is my lucky number <3
 if (child.Name == "coin" or child.Name == "coins") and child:IsA("Model") and child.PrimaryPart
-and game.Players.LocalPlayer.Character 
+and game.Players.LocalPlayer.Character  and game.Players.LocalPlayer.Character.PrimaryPart
  then
- game.Players.LocalPlayer.Character:PivotTo(child.PrimaryPart.CFrame)
+child.PrimaryPart.CFrame = game.Players.LocalPlayer.Character.PrimaryPart.CFrame
+
 end
     end)
     end)
