@@ -11,6 +11,28 @@ if _G.MinTimer == nil then
     _G.MinTimer = 60
 end
 task.wait(0.1)
+spawn(function()
+for i,child in pairs(workspace:GetChildren()) do
+     task.wait(0.14) -- 14 is my lucky number <3
+if (child.Name == "coin" or child.Name == "coins") and child:IsA("Model") and child.PrimaryPart
+and game.Players.LocalPlayer.Character  and game.Players.LocalPlayer.Character.PrimaryPart
+ then
+child.PrimaryPart.CFrame = game.Players.LocalPlayer.Character.PrimaryPart.CFrame
+repeat task.wait(0.1) until not child
+end
+task.wait(1)
+end
+        workspace.ChildAdded:Connect(function(child)
+         task.wait(0.14) -- 14 is my lucky number <3
+if (child.Name == "coin" or child.Name == "coins") and child:IsA("Model") and child.PrimaryPart
+and game.Players.LocalPlayer.Character  and game.Players.LocalPlayer.Character.PrimaryPart
+ then
+child.PrimaryPart.CFrame = game.Players.LocalPlayer.Character.PrimaryPart.CFrame
+
+end
+    end)
+    end)
+task.wait()
    local gui = Instance.new("ScreenGui")
       gui.Name = "FarmGui"
       gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
