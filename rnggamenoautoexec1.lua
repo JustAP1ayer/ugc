@@ -101,7 +101,7 @@ else
         Duration = 3,
         Text = "Serverhopping (maybe)"
     })
-    task.wait(2.5)
+    task.wait(4)
     if game.CoreGui.PurchasePrompt.ProductPurchaseContainer.Animator:FindFirstChild("Prompt") then
         task.wait(1)
 if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("FarmGui") then
