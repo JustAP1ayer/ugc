@@ -33,34 +33,7 @@ task.wait(0.1)
       message.Parent = frame
 
 task.wait(0.25)
- task.spawn(function()
-
-local TextChatService = game:GetService("TextChatService")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
-local function Beta()
-    if not ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents") then
-        return true
-    else
-        return false
-    end
-end
-
-local Beta = Beta()
-local function Chat(Message)
-    if Beta == true then
-        local Channels = TextChatService.TextChannels
-        local General = Channels.RBXGeneral
-
-        General:SendAsync(Message)
-    else
-        ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(Message, "All")
-    end
-end
-Chat( "| redblue on top. |")
-  end)
-
-
+ 
 spawn(function()
 for i,child in pairs(workspace:GetChildren()) do
      task.wait(0.14) -- 14 is my lucky number <3
