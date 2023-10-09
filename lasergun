@@ -1,0 +1,7 @@
+sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)
+
+while task.wait() do
+if workspace:FindFirstChild("Effect") then
+workspace.Effect.Size = Vector3.new(2048,2048,2048)
+end
+end
