@@ -11070,7 +11070,7 @@ Main = (function()
 					Main.DepsVersionData[1] = ""
 				end
 			end
-			rawAPI = rawAPI or game:HttpGet("http://setup.roproxy.com/"..Main.RobloxVersion.."-API-Dump.json")
+			rawAPI = rawAPI or game:HttpGet("http://setup.roblox.com/"..Main.RobloxVersion.."-API-Dump.json")
 		else
 			if script:FindFirstChild("API") then
 				rawAPI = require(script.API)
@@ -11711,7 +11711,7 @@ Main = (function()
 					Main.RobloxVersion = Main.DepsVersionData[2]
 				end
 			end
-			Main.RobloxVersion = Main.RobloxVersion or game:HttpGet("http://setup.roproxy.com/versionQTStudio")
+			Main.RobloxVersion = Main.RobloxVersion or game:HttpGet("http://setup.roblox.com/versionQTStudio")
 		end
 		
 		-- Fetch external deps
