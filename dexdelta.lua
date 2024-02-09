@@ -11070,7 +11070,7 @@ Main = (function()
 					Main.DepsVersionData[1] = ""
 				end
 			end
-			rawAPI = rawAPI or game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/e/main/e")
+			rawAPI = rawAPI or game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/e/main/e.json")
 		else
 			if script:FindFirstChild("API") then
 				rawAPI = require(script.API)
