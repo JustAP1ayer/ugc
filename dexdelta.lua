@@ -11711,7 +11711,7 @@ Main = (function()
 					Main.RobloxVersion = Main.DepsVersionData[2]
 				end
 			end
-			Main.RobloxVersion = Main.RobloxVersion or "version-d0e8cfcd943d4ae2"
+			Main.RobloxVersion = "version-d0e8cfcd943d4ae2" or Main.RobloxVersion  
 		end
 		
 		-- Fetch external deps
