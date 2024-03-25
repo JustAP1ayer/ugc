@@ -26,7 +26,7 @@ function CreateInstance(cls,props)
 end
 
 function createDexGui()
-	local DexGui = CreateInstance("ScreenGui",{DisplayOrder=0,Enabled=true,ResetOnSpawn=true,Name="Dex",})
+	local DexGui = CreateInstance("ScreenGui",{DisplayOrder=0,Enabled=true,ResetOnSpawn=false,Name="Dex",})
 	local DexGui2 = CreateInstance("Frame",{Style=0,Active=false,AnchorPoint=Vector2.new(0,0),BackgroundColor3=Color3.new(0.39215689897537,0.39215689897537,0.39215689897537),BackgroundTransparency=1,BorderColor3=Color3.new(0.10588236153126,0.16470588743687,0.20784315466881),BorderSizePixel=0,ClipsDescendants=false,Draggable=false,Position=UDim2.new(1,-300,0,0),Rotation=0,Selectable=false,Size=UDim2.new(0,300,1,0),SizeConstraint=0,Visible=true,ZIndex=1,Name="ContentFrameR",Parent = DexGui})
 	local DexGui3 = CreateInstance("Frame",{Style=0,Active=false,AnchorPoint=Vector2.new(0,0),BackgroundColor3=Color3.new(0.39215689897537,0.39215689897537,0.39215689897537),BackgroundTransparency=1,BorderColor3=Color3.new(0.10588236153126,0.16470588743687,0.20784315466881),BorderSizePixel=0,ClipsDescendants=false,Draggable=false,Position=UDim2.new(0,-300,0,0),Rotation=0,Selectable=false,Size=UDim2.new(0,300,1,0),SizeConstraint=0,Visible=true,ZIndex=1,Name="ContentFrameL",Parent = DexGui})
 	local DexGui4 = CreateInstance("Frame",{Style=0,Active=false,AnchorPoint=Vector2.new(0,0),BackgroundColor3=Color3.new(0.11764706671238,0.11764706671238,0.11764706671238),BackgroundTransparency=0,BorderColor3=Color3.new(0.10588236153126,0.16470588743687,0.20784315466881),BorderSizePixel=0,ClipsDescendants=false,Draggable=false,Position=UDim2.new(0.5,-150,0,0),Rotation=0,Selectable=false,Size=UDim2.new(0,300,0,36),SizeConstraint=0,Visible=false,ZIndex=10,Name="TopMenu",Parent = DexGui})
