@@ -1,4 +1,5 @@
 -- // Load
+
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end
@@ -7,22 +8,30 @@ repeat
 until game.Loaded and game.Players.LocalPlayer.Character and
     game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
 task.wait(12.5) -- Lets dialogue to load.
+
 -- // Services
+
 local TeleportService = game:GetService("TeleportService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Workspace = game:GetService("Workspace")
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
+
 -- // Variables
+
 local localPlayer = Players.LocalPlayer
 local targetPlaceId = 17727263108
 local args = { "SkipStoryline" }
 local queuetp = queueonteleport or queue_on_teleport
+
 -- // Teleport Check
+
 if game.PlaceId ~= targetPlaceId then
     TeleportService:Teleport(targetPlaceId, localPlayer)
 end
+
 -- // Function
+
 local function TweenTo(cf, dur)
     local Character = localPlayer.Character
     if not Character or not Character:FindFirstChild("HumanoidRootPart") then
@@ -41,7 +50,31 @@ local function TweenTo(cf, dur)
     tween.Completed:wait()
     return tween
 end
+
+-- // Credits
+
+local gui = Instance.new("ScreenGui")
+gui.Name = "FarmGui"
+gui.Parent = localPlayer:WaitForChild("PlayerGui")
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(1, 0, 1, 0)
+frame.BackgroundColor3 = Color3.new(0, 0, 0)
+frame.BackgroundTransparency = 0.75
+frame.Parent = gui
+local message = Instance.new("TextLabel")
+message.Size = UDim2.new(1, -20, 0, 100)
+message.Position = UDim2.new(0, 10, 0.5, -50)
+message.BackgroundColor3 = Color3.new(1, 1, 1)
+message.BackgroundTransparency = 0.15
+message.Font = Enum.Font.Arcade
+message.FontSize = Enum.FontSize.Size36
+message.Text = "AutoFarm in Progress! Made By 'redblue.' on discord"
+message.TextColor3 = Color3.new(0, 0, 0)
+message.TextScaled = true
+message.Parent = frame
+
 -- // Script
+
 Workspace.Maps["Lobby-1"]:WaitForChild("Line",100):Destroy()
 ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("GamePlayerRE"):FireServer(unpack(args))
 
