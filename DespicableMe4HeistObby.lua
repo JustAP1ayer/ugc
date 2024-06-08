@@ -3,10 +3,10 @@ if not game:IsLoaded() then
     game.Loaded:Wait()
 end
 repeat
-    wait()
+    task.wait()
 until game.Loaded and game.Players.LocalPlayer.Character and
     game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
-task.wait(10) -- Lets dialogue to load.
+task.wait(12.5) -- Lets dialogue to load.
 -- // Services
 local TeleportService = game:GetService("TeleportService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
