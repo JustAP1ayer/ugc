@@ -26,7 +26,7 @@ local function Chat(Message)
 end
 for i=1,3 do
  task.spawn(function()
-Chat(".gg/ugcleaks || redblue on top.")
+Chat(" ")
   end)
 end
 task.wait(0.5)
