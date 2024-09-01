@@ -1,7 +1,7 @@
 task.wait(2.5)
  if not game:IsLoaded() then game.Loaded:Wait() end
   repeat wait(0.1) until  game.Loaded
-task.wait(10) -- to avoid broken execution
+task.wait(2) -- to avoid broken execution
 local TextChatService = game:GetService("TextChatService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
